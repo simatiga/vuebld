@@ -4449,7 +4449,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Menu6_Nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu6_Nav */ "./src/components/Menu6/Menu6_Nav.vue");
- // import resultJson from './resultVal.json'
+
+var resultJson; // import resultJson from './resultVal.json'
 
 var contents_id;
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -4459,12 +4460,36 @@ var contents_id;
 
   data() {
     return {
-      contents_id // resultCol: resultJson[0],
-      // resultVal: resultJson[1],
-
+      selectList: [{
+        names: '표준단어',
+        router: '/da_std_word',
+        id: 1
+      }, {
+        names: '표준용어',
+        router: '/da_std_term',
+        id: 2
+      }],
+      resultJson,
+      resultArr: [],
+      resultKey: []
     };
-  }
+  },
 
+  methods: {
+    selectData(dataNm) {
+      const axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+
+      this.$axios.get(dataNm).then(response => {
+        this.resultJson = response.data; // console.log(this.resultJson[0])  // rownum 1 (한 건, 컬럼 여러개)
+
+        this.resultArr = this.resultJson[0].get_result_json[0];
+        this.resultKey = Object.keys(this.resultArr[0]);
+      }).catch(error => {
+        console.log(error);
+      });
+    }
+
+  }
 });
 
 /***/ }),
@@ -6803,26 +6828,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  class: "Menu6 p-3 my-3 border"
+
+const _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu6-1.vue]", -1
+/* HOISTED */
+);
+
+const _hoisted_2 = ["onClick"];
+const _hoisted_3 = {
+  class: "row"
 };
-
-const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu6-1.vue]", -1
-/* HOISTED */
-);
-
-const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, "출처 : 식품의약품안전처 - 식품영양성분 데이터베이스", -1
-/* HOISTED */
-);
-
-const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, "데이터 : 식품영양성분 DB 통합본 (https://various.foodsafetykorea.go.kr/nutrient/)", -1
-/* HOISTED */
-);
-
+const _hoisted_4 = {
+  class: ".table-sm"
+};
+const _hoisted_5 = ["textContent"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Menu6_Nav = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Menu6_Nav");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Menu6_Nav), _hoisted_3, _hoisted_4]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.selectList, item => {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
+      key: item.id,
+      onClick: $event => $options.selectData(item.router)
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.names), 9
+    /* TEXT, PROPS */
+    , _hoisted_2);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.resultKey, (a, i) => {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
+      key: i
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.resultKey[i]), 1
+    /* TEXT */
+    );
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.resultArr, (row, rid) => {
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
+      key: rid
+    }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(row, (col, cid) => {
+      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
+        key: cid,
+        textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(col)
+      }, null, 8
+      /* PROPS */
+      , _hoisted_5);
+    }), 128
+    /* KEYED_FRAGMENT */
+    ))]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),
@@ -7221,33 +7275,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  class: "Menu7 p-3 my-3 border"
-};
 
-const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu7-5.vue]", -1
+const _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu7-5.vue]", -1
 /* HOISTED */
 );
 
-const _hoisted_3 = ["onClick"];
-const _hoisted_4 = {
+const _hoisted_2 = ["onClick"];
+const _hoisted_3 = {
   class: "row"
 };
-const _hoisted_5 = {
+const _hoisted_4 = {
   class: ".table-sm"
 };
-const _hoisted_6 = ["textContent"];
+const _hoisted_5 = ["textContent"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.selectList, item => {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.selectList, item => {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: item.id,
       onClick: $event => $options.selectData(item.router)
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.names), 9
     /* TEXT, PROPS */
-    , _hoisted_3);
+    , _hoisted_2);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.resultKey, (a, i) => {
+  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.resultKey, (a, i) => {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
       key: i
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.resultKey[i]), 1
@@ -7264,7 +7315,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(col)
       }, null, 8
       /* PROPS */
-      , _hoisted_6);
+      , _hoisted_5);
     }), 128
     /* KEYED_FRAGMENT */
     ))]);
@@ -8125,7 +8176,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: DarkOliveGreen;\r\n  text-decoration: none;\n}\r\n\r\n/* text start */\r\n\r\n/* text end */\r\n\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\n.left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\n}\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\n}\n.contents {\r\n  width: 1100px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid #bcbcbc;\n}\n.container-column {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: column;\n}\n.container-row {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: row;\n}\n.boxes {\r\n  width: 33%;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n  border: 1px solid LightGray;\n}\n.boxes-small {\r\n  width: 120px;\r\n  margin: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\n.jb-container {\r\n  width: 1400px;\r\n  margin: 10px auto;\r\n  padding: 0px;\r\n  border: 0px solid #bcbcbc;\n}\n.jb-header {\r\n  clear: both;\r\n  padding: 40px;\r\n  border: 1px solid #bcbcbc;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: DarkOliveGreen;\r\n\r\n  font-size: 1.5rem;\n}\n.jb-left {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  margin-bottom: 1rem;\r\n  float: left;\r\n  border: 1px solid DarkOliveGreen;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff); */\r\n  border-radius: 20px 20px 20px 20px;\n}\n.jb-right {\r\n  width: 1170px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  margin-left: 1rem;\r\n  margin-bottom: 1rem;\r\n  float: left;\r\n  border: 1px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px;\n}\n.jb-footer {\r\n  clear: both;\r\n  padding: 20px;\r\n  border: 1px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px;\n}\n@media ( max-width: 1023px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n@media ( max-width: 767px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n.menu {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  float: left;\r\n  /* border: 1px solid #bcbcbc; */\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\r\n\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border-radius: 20px 20px 20px 20px;  */\n}\r\n\r\n/* div end */\r\n\r\n/* ul li start */\nul {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\n}\n.ul-card {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n/* ul li end */\n.button-header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-card {\r\n  width: 100px;\r\n  height: 30px;\r\n  margin: 0px;\r\n  padding: 3px;  \r\n  font-size: 0.928rem;\r\n  /* background-color: #9abf7f; */\r\n  border-top: 1px solid DarkOliveGreen;\r\n  border-radius: 5px;\n}\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 100%;\r\n  border-collapse: collapse;\n}\nth {\r\n  border-top: 3px solid DarkOliveGreen;\r\n  /* border: 1px solid 9abf7f; */\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\n.table-card {\r\n  width: 100%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-bottom: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n  list-style: square;\n}\n.td-card {\r\n  text-align: left;\r\n  /* padding: 7px; */\r\n  background-color: white;\r\n  list-style: square;\n}\r\n/* table end */\n.image-card {\r\n  /* border: 3px solid gold; */\r\n  border-radius: 20px;\r\n  /* -moz-border-radius: 7px;\r\n  -khtml-border-radius: 7px;\r\n  -webkit-border-radius: 7px; */\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: DarkOliveGreen;\r\n  text-decoration: none;\n}\r\n\r\n/* text start */\r\n\r\n/* text end */\r\n\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\n.left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\n}\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\n}\n.contents {\r\n  width: 1100px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid #bcbcbc;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.container-column {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: column;\n}\n.container-row {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: row;\n}\n.boxes {\r\n  width: 33%;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n  border: 1px solid LightGray;\n}\n.boxes-small {\r\n  width: 120px;\r\n  margin: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\n.jb-container {\r\n  width: 1400px;\r\n  margin: 10px auto;\r\n  padding: 0px;\r\n  border: 0px solid #bcbcbc;\n}\n.jb-header {\r\n  clear: both;\r\n  padding: 40px;\r\n  border: 1px solid #bcbcbc;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: DarkOliveGreen;\r\n\r\n  font-size: 1.5rem;\n}\n.jb-left {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  margin-bottom: 1rem;\r\n  float: left;\r\n  border: 1px solid DarkOliveGreen;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff); */\r\n  border-radius: 20px 20px 20px 20px;\n}\n.jb-right {\r\n  width: 1170px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  margin-left: 1rem;\r\n  margin-bottom: 1rem;\r\n  float: left;\r\n  border: 1px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px;\n}\n.jb-footer {\r\n  clear: both;\r\n  padding: 20px;\r\n  border: 1px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px;\n}\n@media ( max-width: 1023px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n@media ( max-width: 767px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n.menu {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  float: left;\r\n  /* border: 1px solid #bcbcbc; */\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\r\n\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border-radius: 20px 20px 20px 20px;  */\n}\r\n\r\n/* div end */\r\n\r\n/* ul li start */\nul {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\n}\n.ul-card {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n/* ul li end */\n.button-header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-card {\r\n  width: 100px;\r\n  height: 30px;\r\n  margin: 0px;\r\n  padding: 3px;  \r\n  font-size: 0.928rem;\r\n  /* background-color: #9abf7f; */\r\n  border-top: 1px solid DarkOliveGreen;\r\n  border-radius: 5px;\n}\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 100%;\r\n  border-collapse: collapse;\n}\nth {\r\n  border-top: 3px solid DarkOliveGreen;\r\n  /* border: 1px solid 9abf7f; */\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\n.table-card {\r\n  width: 100%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-bottom: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n  list-style: square;\n}\n.td-card {\r\n  text-align: left;\r\n  /* padding: 7px; */\r\n  background-color: white;\r\n  list-style: square;\n}\r\n/* table end */\n.image-card {\r\n  /* border: 3px solid gold; */\r\n  border-radius: 20px;\r\n  /* -moz-border-radius: 7px;\r\n  -khtml-border-radius: 7px;\r\n  -webkit-border-radius: 7px; */\n}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
