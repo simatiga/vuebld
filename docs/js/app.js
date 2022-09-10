@@ -5124,18 +5124,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
 const _hoisted_1 = {
-  id: "top"
+  id: "jb-container"
+};
+const _hoisted_2 = {
+  id: "jb-header"
 };
 
-const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("My Project");
+const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("My Project");
 
-const _hoisted_3 = {
-  key: 0,
-  id: "left"
-};
 const _hoisted_4 = {
-  id: "contents"
+  key: 0,
+  id: "jb-left"
 };
+const _hoisted_5 = {
+  id: "jb-right"
+};
+
+const _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  id: "jb-footer"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, "Copyright")], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -5143,14 +5153,14 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   const _component_Right = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Right");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"row container-fluid header\">\r\n    <div class=\"col-sm-1 .\" style=\"display:flex;align-items:center;\">\r\n       <router-link to=\"/\" style=\"text-decoration: none; color: LightGoldenrodYellow;\">My Project</router-link>\r\n    </div>\r\n    <div class=\"col-sm-11 \" style=\"display:flex;align-items:center;\">\r\n      <button type=\"button\" class=\"header\" v-on:click =\"active = !active\">Menu</button>\r\n    </div>\r\n  </div>\r\n  <div class=\"row container-fluid contents\">\r\n    <div class=\"col-sm-2\" v-if=\"active\">\r\n      <Left />\r\n    </div>\r\n    <div class=\"col-sm-10 contents\">\r\n      <Right />\r\n    </div>\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"row container-fluid header\">\r\n    <div class=\"col-sm-1 .\" style=\"display:flex;align-items:center;\">\r\n       <router-link to=\"/\" style=\"text-decoration: none; color: LightGoldenrodYellow;\">My Project</router-link>\r\n    </div>\r\n    <div class=\"col-sm-11 \" style=\"display:flex;align-items:center;\">\r\n      <button type=\"button\" class=\"header\" v-on:click =\"active = !active\">Menu</button>\r\n    </div>\r\n  </div>\r\n  <div class=\"row container-fluid contents\">\r\n    <div class=\"col-sm-2\" v-if=\"active\">\r\n      <Left />\r\n    </div>\r\n    <div class=\"col-sm-10 contents\">\r\n      <Right />\r\n    </div>\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div id=\"top\">\r\n    <router-link to=\"/\" style=\"text-decoration: none; color: black;\">My Project</router-link>\r\n    <button type=\"button\" class=\"header\" v-on:click =\"active = !active\">Menu</button>\r\n  </div>\r\n  <div id=\"left\" v-if=\"active\">\r\n    <Left />\r\n  </div>\r\n  <div id=\"contents\">\r\n    <Right />\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     to: "/",
     style: {
       "text-decoration": "none",
       "color": "black"
     }
   }, {
-    default: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(() => [_hoisted_2]),
+    default: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(() => [_hoisted_3]),
     _: 1
     /* STABLE */
 
@@ -5158,8 +5168,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     type: "button",
     class: "header",
     onClick: _cache[0] || (_cache[0] = $event => $data.active = !$data.active)
-  }, "Menu")]), $data.active ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Left)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Right)])], 64
-  /* STABLE_FRAGMENT */
+  }, "Menu")]), $data.active ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Left)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Right)]), _hoisted_6])], 2112
+  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
 
@@ -5267,17 +5277,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  class: "container-fluid p-3 my-3 border"
-};
+const _hoisted_1 = ["src"];
 const _hoisted_2 = {
-  class: "row"
+  class: "col-sm-4 border"
 };
-const _hoisted_3 = {
-  class: ".table-sm"
+const _hoisted_3 = ["src"];
+const _hoisted_4 = {
+  class: "col-sm-4 border"
 };
-const _hoisted_4 = ["textContent"];
-const _hoisted_5 = ["textContent"];
+const _hoisted_5 = ["src"];
 const _hoisted_6 = {
   class: "row"
 };
@@ -5293,80 +5301,39 @@ const _hoisted_11 = {
   class: "col-sm-4 border"
 };
 const _hoisted_12 = ["src"];
-const _hoisted_13 = {
-  class: "row"
-};
-const _hoisted_14 = {
-  class: "col-sm-4 border"
-};
-const _hoisted_15 = ["src"];
-const _hoisted_16 = {
-  class: "col-sm-4 border"
-};
-const _hoisted_17 = ["src"];
-const _hoisted_18 = {
-  class: "col-sm-4 border"
-};
-const _hoisted_19 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Tmp = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Tmp");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Tmp), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.arrKey, (a, i) => {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
-      key: i,
-      textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(a.col)
-    }, null, 8
-    /* PROPS */
-    , _hoisted_4);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tbody", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.arr, (row, rid) => {
-    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("tr", {
-      key: rid
-    }, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(row, (col, cid) => {
-      return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("td", {
-        key: cid,
-        textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(col)
-      }, null, 8
-      /* PROPS */
-      , _hoisted_5);
-    }), 128
-    /* KEYED_FRAGMENT */
-    ))]);
-  }), 128
-  /* KEYED_FRAGMENT */
-  ))])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Tmp /> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[0].url
   }, null, 8
   /* PROPS */
-  , _hoisted_8), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  , _hoisted_1), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[1].url
   }, null, 8
   /* PROPS */
-  , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  , _hoisted_3), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[2].url
   }, null, 8
   /* PROPS */
-  , _hoisted_12), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  , _hoisted_5), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[3].url
   }, null, 8
   /* PROPS */
-  , _hoisted_15), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  , _hoisted_8), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[4].url
   }, null, 8
   /* PROPS */
-  , _hoisted_17), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+  , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"opacity-50 position-relative top-50 start-50 translate-middle\" style=\"background-color: white; width:100%; height: 100%;\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
     class: "img-fluid",
     src: this.images[5].url
   }, null, 8
   /* PROPS */
-  , _hoisted_19), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")])])])], 64
-  /* STABLE_FRAGMENT */
+  , _hoisted_12), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" </div> ")])])])], 2112
+  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
   );
 }
 
@@ -7131,30 +7098,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  class: "Menu7 p-3 my-3 border"
-};
 
-const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu7-1.vue]", -1
+const _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu7-1.vue]", -1
 /* HOISTED */
 );
 
-const _hoisted_3 = ["onClick"];
-const _hoisted_4 = {
-  class: "row"
-};
-const _hoisted_5 = ["textContent"];
+const _hoisted_2 = ["onClick"];
+const _hoisted_3 = ["textContent"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.submenu, item => {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.submenu, item => {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       key: item.id,
       onClick: $event => $options.select(item.id)
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.names), 9
     /* TEXT, PROPS */
-    , _hoisted_3);
+    , _hoisted_2);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <table class=\"table table-bordered table-sm\">\r\n          <thead> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <table class=\"table table-bordered table-hover dt-responsive\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.resultCol, (a, i) => {
+  )), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <table class=\"table table-bordered table-sm\">\r\n          <thead> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <table class=\"table table-bordered table-hover dt-responsive\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("table", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("thead", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("tr", null, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.resultCol, (a, i) => {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("th", {
       key: i
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.resultCol[i].col), 1
@@ -7171,13 +7132,13 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         textContent: (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(col)
       }, null, 8
       /* PROPS */
-      , _hoisted_5);
+      , _hoisted_3);
     }), 128
     /* KEYED_FRAGMENT */
     ))]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])])])], 64
+  ))])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -7688,14 +7649,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  id: "right",
-  class: "container-fluid border"
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_view);
 }
 
 /***/ }),
@@ -8065,7 +8022,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.i(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_use_1_node_modules_vue_cli_service_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_use_2_assets_style_css__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.vertical-align-content {\r\n  background-color:#f18c16;\r\n  /* height:150px; */\r\n  display:flex;\r\n  align-items:center;\r\n  /* Uncomment next line to get horizontal align also */\r\n  /* justify-content:center; */\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\r\n", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -8263,7 +8220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: hotpink;\r\n  text-decoration: none;\n}\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\n#left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\n}\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\n}\ndiv.contents {\r\n  color: rgb(105, 64, 17);\r\n  /* font-weight: bold;  */\r\n  /* font-style: italic; */\r\n  /* font-size: 14px; */\r\n  font-size: 0.928rem;\r\n  /* line-height: 1.0em; */\r\n  /* font-family: Courier; */\n}\ndiv.header {\r\n  background:DarkOliveGreen;\r\n  height: em;\r\n  color: white;\r\n  font-weight: bold; \r\n  font-style: italic;\r\n  /* font-size: 20px; */\r\n  font-size: 0.928rem;\r\n  line-height: 1.0em;\r\n  /* font-family: Courier; */\n}\n.home {\n}\r\n\r\n/* div end */\nbutton.header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\nbutton.menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\r\n\r\n/* div.b {font-size: large;}\r\ndiv.c {font-size: 150%;} */\r\n\r\n\r\n/* ul li start */\nul {\r\n  color: pink;\r\n  font-size: 0.8rem;\r\n  list-style:none;    /*점을 없애는 부분*/\r\n  padding-left: 0.1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  padding:1;\r\n  line-height: 1.5em;\n}\nul li {\r\n  color: 9abf7f;\r\n  /* font-size: 14px; */\r\n  font-size: 0.8rem;\r\n  /* list-style:none;    점을 없애는 부분 */\r\n  padding-left: 0.928rem;     /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  /* display:block; */\r\n  /* margin:0; */\r\n  margin-bottom:10px;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n\r\n/* ul li end */\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 90%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\n}\nth {\r\n  /* border-bottom: 1px solid #DarkOliveGreen; */\r\n  border: 1px solid 9abf7f;\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\r\n/* table end */\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: hotpink;\r\n  text-decoration: none;\n}\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\n#left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\n}\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\n}\ndiv.contents {\r\n  color: rgb(105, 64, 17);\r\n  /* font-weight: bold;  */\r\n  /* font-style: italic; */\r\n  /* font-size: 14px; */\r\n  font-size: 0.928rem;\r\n  /* line-height: 1.0em; */\r\n  /* font-family: Courier; */\n}\ndiv.header {\r\n  background:DarkOliveGreen;\r\n  height: em;\r\n  color: white;\r\n  font-weight: bold; \r\n  font-style: italic;\r\n  /* font-size: 20px; */\r\n  font-size: 0.928rem;\r\n  line-height: 1.0em;\r\n  /* font-family: Courier; */\n}\n.home {\n}\r\n\r\n/* div end */\nbutton.header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\nbutton.menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\r\n\r\n/* div.b {font-size: large;}\r\ndiv.c {font-size: 150%;} */\r\n\r\n\r\n/* ul li start */\nul {\r\n  color: pink;\r\n  font-size: 0.8rem;\r\n  list-style:none;    /*점을 없애는 부분*/\r\n  padding-left: 0.1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  padding:1;\r\n  line-height: 1.5em;\n}\nul li {\r\n  color: 9abf7f;\r\n  /* font-size: 14px; */\r\n  font-size: 0.8rem;\r\n  /* list-style:none;    점을 없애는 부분 */\r\n  padding-left: 0.928rem;     /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  /* display:block; */\r\n  /* margin:0; */\r\n  margin-bottom:10px;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n\r\n/* ul li end */\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 90%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\n}\nth {\r\n  /* border-bottom: 1px solid #DarkOliveGreen; */\r\n  border: 1px solid 9abf7f;\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\r\n/* table end */\n#jb-container {\r\n  width: 1360px;\r\n  margin: 10px auto;\r\n  padding: 20px;\r\n  border: 1px solid #bcbcbc;\n}\n#jb-header {\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  border: 1px solid #bcbcbc;\r\n  background-color: DarkOliveGreen;\n}\n#jb-left {\r\n  width: 200px;\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  float: left;\r\n  border: 1px solid #bcbcbc;\n}\n#jb-right {\r\n  width: 1060px;\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  float: right;\r\n  border: 1px solid #bcbcbc;\n}\n#jb-footer {\r\n  clear: both;\r\n  padding: 20px;\r\n  border: 1px solid #bcbcbc;\n}\n@media ( max-width: 1023px ) {\n#jb-container {\r\n    width: auto;\n}\n#jb-content {\r\n    float: none;\r\n    width: auto;\n}\n#jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n@media ( max-width: 767px ) {\n#jb-container {\r\n    width: auto;\n}\n#jb-content {\r\n    float: none;\r\n    width: auto;\n}\n#jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -8287,7 +8244,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\r\n}\r\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\r\n}\r\nheader h1,\r\nheader p {\r\n  margin: 0;\r\n}\r\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\r\n}\r\naside {\r\n  padding: 7vh 5vw;\r\n}\r\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\r\n}\r\n@media (min-width: 40em) {\r\n  main {\r\n    display: flex;\r\n  }\r\n  aside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\r\n  }\r\n  .primary {\r\n    order: 2;\r\n  }\r\n}\r\n\r\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\r\n }\r\n.child {\r\n display: inline-block;\r\n top: 50px;  \r\n }\r\na {\r\n  color: hotpink;\r\n  text-decoration: none;\r\n}\r\n\r\n/* div start */\r\n#top {\r\n  float: top;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\r\n}\r\n\r\n#left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\r\n}\r\n\r\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\r\n}\r\n\r\ndiv.contents {\r\n  color: rgb(105, 64, 17);\r\n  /* font-weight: bold;  */\r\n  /* font-style: italic; */\r\n  /* font-size: 14px; */\r\n  font-size: 0.928rem;\r\n  /* line-height: 1.0em; */\r\n  /* font-family: Courier; */\r\n}\r\n\r\ndiv.header {\r\n  background:DarkOliveGreen;\r\n  height: em;\r\n  color: white;\r\n  font-weight: bold; \r\n  font-style: italic;\r\n  /* font-size: 20px; */\r\n  font-size: 0.928rem;\r\n  line-height: 1.0em;\r\n  /* font-family: Courier; */\r\n}\r\n\r\n.home {\r\n  \r\n}\r\n\r\n/* div end */\r\n\r\n\r\n\r\nbutton.header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\r\n}\r\n\r\nbutton.menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\r\n}\r\n\r\n/* div.b {font-size: large;}\r\ndiv.c {font-size: 150%;} */\r\n\r\n\r\n/* ul li start */\r\nul {\r\n  color: pink;\r\n  font-size: 0.8rem;\r\n  list-style:none;    /*점을 없애는 부분*/\r\n  padding-left: 0.1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  padding:1;\r\n  line-height: 1.5em;\r\n}\r\nul li {\r\n  color: 9abf7f;\r\n  /* font-size: 14px; */\r\n  font-size: 0.8rem;\r\n  /* list-style:none;    점을 없애는 부분 */\r\n  padding-left: 0.928rem;     /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  /* display:block; */\r\n  /* margin:0; */\r\n  margin-bottom:10px;\r\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n\r\n/* ul li end */\r\n\r\n\r\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\r\n}\r\n\r\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\r\n}\r\n\r\nimg { width: 100%; }\r\n\r\n/* table start */\r\ntable {\r\n  width: 90%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n}\r\nth {\r\n  /* border-bottom: 1px solid #DarkOliveGreen; */\r\n  border: 1px solid 9abf7f;\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\r\n}\r\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\r\n}\r\n/* table end */\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\r\n}\r\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\r\n}\r\nheader h1,\r\nheader p {\r\n  margin: 0;\r\n}\r\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\r\n}\r\naside {\r\n  padding: 7vh 5vw;\r\n}\r\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\r\n}\r\n@media (min-width: 40em) {\r\n  main {\r\n    display: flex;\r\n  }\r\n  aside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\r\n  }\r\n  .primary {\r\n    order: 2;\r\n  }\r\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\r\n\r\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\r\n }\r\n.child {\r\n display: inline-block;\r\n top: 50px;  \r\n }\r\na {\r\n  color: hotpink;\r\n  text-decoration: none;\r\n}\r\n\r\n/* div start */\r\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\r\n}\r\n\r\n#left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n  /* float: left;\r\n  width: 200px;\r\n  min-height: 250px;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; */\r\n}\r\n\r\n#right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\r\n}\r\n\r\ndiv.contents {\r\n  color: rgb(105, 64, 17);\r\n  /* font-weight: bold;  */\r\n  /* font-style: italic; */\r\n  /* font-size: 14px; */\r\n  font-size: 0.928rem;\r\n  /* line-height: 1.0em; */\r\n  /* font-family: Courier; */\r\n}\r\n\r\ndiv.header {\r\n  background:DarkOliveGreen;\r\n  height: em;\r\n  color: white;\r\n  font-weight: bold; \r\n  font-style: italic;\r\n  /* font-size: 20px; */\r\n  font-size: 0.928rem;\r\n  line-height: 1.0em;\r\n  /* font-family: Courier; */\r\n}\r\n\r\n.home {\r\n  \r\n}\r\n\r\n/* div end */\r\n\r\n\r\n\r\nbutton.header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\r\n}\r\n\r\nbutton.menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\r\n}\r\n\r\n/* div.b {font-size: large;}\r\ndiv.c {font-size: 150%;} */\r\n\r\n\r\n/* ul li start */\r\nul {\r\n  color: pink;\r\n  font-size: 0.8rem;\r\n  list-style:none;    /*점을 없애는 부분*/\r\n  padding-left: 0.1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  padding:1;\r\n  line-height: 1.5em;\r\n}\r\nul li {\r\n  color: 9abf7f;\r\n  /* font-size: 14px; */\r\n  font-size: 0.8rem;\r\n  /* list-style:none;    점을 없애는 부분 */\r\n  padding-left: 0.928rem;     /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  /* display:block; */\r\n  /* margin:0; */\r\n  margin-bottom:10px;\r\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n\r\n/* ul li end */\r\n\r\n\r\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\r\n}\r\n\r\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\r\n}\r\n\r\nimg { width: 100%; }\r\n\r\n/* table start */\r\ntable {\r\n  width: 90%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n}\r\nth {\r\n  /* border-bottom: 1px solid #DarkOliveGreen; */\r\n  border: 1px solid 9abf7f;\r\n  padding: 10px;\r\n  text-align: center;\r\n  background-color: #fafabb;\r\n}\r\ntd {\r\n  text-align: center;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\r\n}\r\n/* table end */\r\n\r\n\r\n\r\n#jb-container {\r\n  width: 1360px;\r\n  margin: 10px auto;\r\n  padding: 20px;\r\n  border: 1px solid #bcbcbc;\r\n}\r\n#jb-header {\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  border: 1px solid #bcbcbc;\r\n  background-color: DarkOliveGreen;\r\n}\r\n#jb-left {\r\n  width: 200px;\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  float: left;\r\n  border: 1px solid #bcbcbc;\r\n}\r\n#jb-right {\r\n  width: 1060px;\r\n  padding: 20px;\r\n  margin-bottom: 20px;\r\n  float: right;\r\n  border: 1px solid #bcbcbc;\r\n}\r\n#jb-footer {\r\n  clear: both;\r\n  padding: 20px;\r\n  border: 1px solid #bcbcbc;\r\n}\r\n\r\n@media ( max-width: 1023px ) {\r\n  #jb-container {\r\n    width: auto;\r\n  }\r\n  #jb-content {\r\n    float: none;\r\n    width: auto;\r\n  }\r\n  #jb-sidebar {\r\n    float: none;\r\n    width: auto;\r\n  }\r\n}\r\n\r\n@media ( max-width: 767px ) {\r\n  #jb-container {\r\n    width: auto;\r\n  }\r\n  #jb-content {\r\n    float: none;\r\n    width: auto;\r\n  }\r\n  #jb-sidebar {\r\n    float: none;\r\n    width: auto;\r\n  }\r\n}", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
