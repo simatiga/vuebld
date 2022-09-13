@@ -3395,7 +3395,7 @@ __webpack_require__.r(__webpack_exports__);
         }]
       }, {
         names: '친환경',
-        router: '/',
+        router: '/menu5',
         id: 5,
         submenu: [{
           names: '재활용',
@@ -4583,11 +4583,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Menu5_Nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Menu5_Nav */ "./src/components/Menu5/Menu5_Nav.vue");
-
+// import Menu5_Nav from './Menu5_Nav';
 /* harmony default export */ __webpack_exports__["default"] = ({
-  components: {
-    Menu5_Nav: _Menu5_Nav__WEBPACK_IMPORTED_MODULE_0__["default"]
+  components: {// Menu5_Nav,
   },
 
   data() {
@@ -5017,10 +5015,13 @@ var moment = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js"
 var vStartCreateDt = moment().subtract(2, 'months'); //한달 전
 
 var vEndCreateDt = moment().subtract(1, 'months');
-var vStartYMD = new String();
-var vEndYMD = new String(); // 공공데이터활용지원센터_보건복지부 코로나19 감염 현황
+var vStartYMD = String(vStartCreateDt.format('YYYYMMDD'));
+var vEndYMD = String(vEndCreateDt.format('YYYYMMDD')); // this.vStartYMD = String(vStartCreateDt.format('YYYYMMDD'));
+// this.vEndYMD = String(vEndCreateDt.format('YYYYMMDD'));
+// 공공데이터활용지원센터_보건복지부 코로나19 감염 현황
+// var URL = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson"
 
-var URL = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson";
+var URL = "openapi/service/rest/Covid19/getCovid19InfStateJson";
 var queryParams = '?' + encodeURIComponent('serviceKey') + '=' + 'Hh%2BfYpk8K0x9lCg%2FzZt3%2B5FU8g5T2yNfBDwrrQ%2FnB99%2BJXNxS03XShrSbnwyHCpiweqMs0i50MmGDKfUOTKJfQ%3D%3D';
 /* Service Key*/
 
@@ -5039,7 +5040,9 @@ queryParams += '&' + encodeURIComponent('endCreateDt') + '=' + encodeURIComponen
 URL += queryParams; // 기상청_생활기상지수 조회서비스(3.0) 
 // XML  http://apis.data.go.kr/1360000/LivingWthrIdxServiceV2/getUVIdxV2?ServiceKey=Hh%2BfYpk8K0x9lCg%2FzZt3%2B5FU8g5T2yNfBDwrrQ%2FnB99%2BJXNxS03XShrSbnwyHCpiweqMs0i50MmGDKfUOTKJfQ%3D%3D&pageNo=1&numOfRows=10&dataType=XML&areaNo=1111051500&time=2022090310
 // json http://apis.data.go.kr/1360000/LivingWthrIdxServiceV2/getUVIdxV2?ServiceKey=Hh%2BfYpk8K0x9lCg%2FzZt3%2B5FU8g5T2yNfBDwrrQ%2FnB99%2BJXNxS03XShrSbnwyHCpiweqMs0i50MmGDKfUOTKJfQ%3D%3D&pageNo=1&numOfRows=10&dataType=JSON&areaNo=1111051500&time=2022090310
+// var URL2 = "https://www.kdhc.co.kr:443/openapi-data/service/kdhcPowerProd/powerProd?startDate=202001&endDate=202209&pageNo=1&numOfRows=10&serviceKey=Hh%2BfYpk8K0x9lCg%2FzZt3%2B5FU8g5T2yNfBDwrrQ%2FnB99%2BJXNxS03XShrSbnwyHCpiweqMs0i50MmGDKfUOTKJfQ%3D%3D";
 
+var URL2 = "openapi-data/service/kdhcPowerProd/powerProd?startDate=201008&endDate=202209&pageNo=1&numOfRows=10&serviceKey=Hh%2BfYpk8K0x9lCg%2FzZt3%2B5FU8g5T2yNfBDwrrQ%2FnB99%2BJXNxS03XShrSbnwyHCpiweqMs0i50MmGDKfUOTKJfQ%3D%3D";
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     Menu7_Nav: _Menu7_Nav__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -5052,32 +5055,50 @@ URL += queryParams; // 기상청_생활기상지수 조회서비스(3.0)
       vStartYMD: this.vStartYMD,
       vEndYMD: this.vEndYMD,
       submenu: [{
-        names: '코로나19 감염 현황',
+        names: "코로나19 감염 현황",
+        apiUrl: URL,
         id: 1
       }, {
-        names: '서울농업현황',
+        names: "한국지역난방공사 전기생산량",
+        apiUrl: URL2,
         id: 2
       }]
     };
   },
 
-  mounted() {
-    this.vStartYMD = String(vStartCreateDt.format('YYYYMMDD'));
-    this.vEndYMD = String(vEndCreateDt.format('YYYYMMDD'));
-    console.log(this.vStartYMD);
-    console.log(this.vEndYMD);
+  mounted() {// console.log(this.vStartYMD);
+    // console.log(this.vEndYMD);
   },
 
-  created() {
-    axios__WEBPACK_IMPORTED_MODULE_1___default().get(URL).then(response => {
-      this.arr = response.data.response.body.items.item; // console.log(Object.keys(this.arr[0]));
+  // created() {
+  //   axios.get(URL)
+  //   .then(response => {
+  //       this.arr = response.data.response.body.items.item
+  //       // console.log(Object.keys(this.arr[0]));
+  //       this.arrKey = Object.keys(this.arr[0]);
+  //       // console.log(this.arrKey);
+  //           })
+  //   .catch(error => {
+  //     console.log(error)
+  //   })
+  // },
+  methods: {
+    // URL2
+    callApi(apiUrl) {
+      axios__WEBPACK_IMPORTED_MODULE_1___default().get(apiUrl).then(response => {
+        console.log(response.data);
+        this.arr = response.data.response.body.items.item;
+        this.arrKey = Object.keys(this.arr[0]); // console.log(this.arrKey);
+      }).catch(error => {
+        // console.log('Status', response.statusCode);
+        // console.log('Headers', JSON.stringify(response.headers));
+        // console.log('Reponse received', body);
+        console.log(location.origin);
+        console.log(error);
+      });
+    }
 
-      this.arrKey = Object.keys(this.arr[0]); // console.log(this.arrKey);
-    }).catch(error => {
-      console.log(error);
-    });
   }
-
 });
 
 /***/ }),
@@ -7118,32 +7139,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.runtime.esm-bundler.js");
 
-const _hoisted_1 = {
-  class: "menu5 p-3 my-3 border"
-};
 
-const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu5.vue]", -1
+const _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", null, "[Menu5.vue]"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <Menu5_Nav /> ")], -1
 /* HOISTED */
 );
 
-const _hoisted_3 = {
+const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "row"
-};
-const _hoisted_4 = {
-  class: "col-sm-12 border"
-};
-const _hoisted_5 = ["src"];
-function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_Menu5_Nav = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Menu5_Nav");
+}, " test ", -1
+/* HOISTED */
+);
 
+function render(_ctx, _cache, $props, $setup, $data, $options) {
   const _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [_hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Menu5_Nav)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-    src: this.images[0].url,
-    class: "img-fluid rounded"
-  }, null, 8
-  /* PROPS */
-  , _hoisted_5)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"col-sm-9 border\">\r\n      -\r\n    </div> ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)], 64
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -7664,7 +7674,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("button", {
       class: "button-card",
       key: item.id,
-      onClick: $event => _ctx.select(item.id)
+      onClick: $event => $options.callApi(item.apiUrl)
     }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.names), 9
     /* TEXT, PROPS */
     , _hoisted_4);
@@ -8319,9 +8329,10 @@ __webpack_require__.r(__webpack_exports__);
 // import "../node_modules/bootstrap"
 // import "../node_modules/bootstrap/dist/js/bootstrap.js"
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
-// axios.defaults.baseURL = 'http://localhost:8080'
+// axios.defaults.baseURL = 'http://localhost:8080'  // default인 것 같다.
+// axios.defaults.baseURL = 'http://localhost:3000'  // 이걸 설정하면 8080 에서 openapi 가 안된다.  그럼 3000에서는 되나?? 안된다.
+// axios.defaults.baseURL = 'http://localhost'
 
-(axios__WEBPACK_IMPORTED_MODULE_3___default().defaults.baseURL) = 'http://localhost:3000';
 const app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]); // const cors = require('cors');
 // const corsOptions = {
 //     origin: 'http://localhost', 
@@ -8330,11 +8341,7 @@ const app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMP
 
 app.config.globalProperties.$axios = (axios__WEBPACK_IMPORTED_MODULE_3___default()); // app.use(bootstrapVue).use(router).mount('#app')
 
-app.use(_router__WEBPACK_IMPORTED_MODULE_2__["default"]).mount('#app'); // Vue.prototype.$http=axios;
-// const app = createApp(App)
-// app.config.globalProperties.$axios = axios;  //전역변수로 설정 컴포넌트에서 this.$axios 호출할 수 있음
-// app.config.globalProperties.$serverUrl = '//localhost:8081' //api server
-// app.use(router).mount('#app')
+app.use(_router__WEBPACK_IMPORTED_MODULE_2__["default"]).mount('#app');
 
 /***/ }),
 
@@ -8927,7 +8934,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\r\n  background-color: #D6E6F5\r\n  /* R: 181/ G: 214/ B: 146; #B5D692\r\n  R: 163/ G: 204/  B: 163 A3CCA3\r\n  R: 214/ G: 230/ B:  245  D6E6F5 */\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: DarkOliveGreen;\r\n  text-decoration: none;\n}\r\n\r\n/* text start */\r\n\r\n/* text end */\r\n\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\r\n\r\n/* .left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n} */\r\n\r\n/* #right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\r\n} */\n.container-column {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: column;\n}\n.container-row {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: row;\n}\n.boxes {\r\n  width: 33%;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n  border: 1px solid LightGray;\n}\n.boxes-small {\r\n  width: 120px;\r\n  margin: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\r\n\r\n\r\n/* R: 181/ G: 214/ B: 146; #B5D692\r\nR: 163/ G: 204/  B: 163 #A3CCA3\r\nR: 214/ G: 230/ B:  245  #D6E6F5 \r\n*/\n.jb-container {\r\n  width: 1500px;\r\n  margin: 10px auto;\r\n  padding: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\n.jb-header {\r\n  /* clear: both; */\r\n  padding: 1rem;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #B5D692;\r\n\r\n  font-size: 1.5rem;\n}\n.jb-left {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  font-size: 0.928rem;\r\n  /* color: B5D692; */\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff); */\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\n}\n.jb-right {\r\n  width: 1290px;\r\n  height: 750px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-left: 0.5rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\r\n  /* overflow-x: scroll; */\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.jb-right-expand {\r\n  width: 1500px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-left: 0rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\r\n  overflow-x: scroll;\n}\n.contents {\r\n  width: 1190px;\r\n  padding: 20px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid black;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.contents-expand {\r\n  width: 1400px;\r\n  padding: 20px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid black;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.jb-footer {\r\n  clear: both;\r\n  padding: 0.5rem;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #B5D692;\n}\n@media ( max-width: 1023px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n@media ( max-width: 767px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n.menu {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  float: left;\r\n  /* border: 1px solid #bcbcbc; */\r\n  font-size: 0.928rem;\r\n  /* color: black; */\r\n\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border-radius: 20px 20px 20px 20px;  */\n}\r\n\r\n/* div end */\r\n\r\n/* ul li start */\nul {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\n}\n.ul-card {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n/* ul li end */\n.button-header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-card {\r\n  width: 100px;\r\n  height: 30px;\r\n  margin: 0px;\r\n  padding: 3px;  \r\n  font-size: 0.928rem;\r\n  /* background-color: #9abf7f; */\r\n  border-top: 1px solid DarkOliveGreen;\r\n  border-radius: 5px;\n}\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 0.8rem;\n}\nth {\r\n  border-top: 3px solid DarkOliveGreen;\r\n  /* border: 1px solid 9abf7f; */\r\n  padding: 10px;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: left;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\n.table-view {\r\n  background-color: black;\n}\n.table-card {\r\n  width: 100%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-bottom: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n  list-style: square;\n}\n.td-card {\r\n  text-align: left;\r\n  /* padding: 7px; */\r\n  background-color: white;\r\n  list-style: square;\n}\r\n/* table end */\n.image-card {\r\n  /* border: 3px solid gold; */\r\n  border-radius: 20px;\r\n  /* -moz-border-radius: 7px;\r\n  -khtml-border-radius: 7px;\r\n  -webkit-border-radius: 7px; */\n}\r\n\r\n/* .center {\r\n  margin: auto;\r\n  width: 60%;\r\n  border: 3px solid #73AD21;\r\n  padding: 10px;\r\n} */", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\r\n  /* font: 90%/1.4 system-ui; */\r\n  margin: 0;\r\n  font-family: sans-serif;\r\n  font-size: 14px;\r\n  background-color: #D6E6F5\r\n  /* R: 181/ G: 214/ B: 146; #B5D692\r\n  R: 163/ G: 204/  B: 163 A3CCA3\r\n  R: 214/ G: 230/ B:  245  D6E6F5 */\n}\nheader {\r\n  padding: 7vh 5vw;\r\n  border-bottom: 1px solid #ddd;\n}\nheader h1,\r\nheader p {\r\n  margin: 0;\n}\nfooter {\r\n  padding: 7vh 5vw;\r\n  border-top: 1px solid #ddd;\n}\naside {\r\n  padding: 7vh 5vw;\n}\n.primary {\r\n  overflow: auto;\r\n  scroll-snap-type: both mandatory;\r\n  height: 80vh;\n}\n@media (min-width: 40em) {\nmain {\r\n    display: flex;\n}\naside {\r\n    flex: 0 1 20vw;\r\n    order: 1;\r\n    border-right: 1px solid #ddd;\n}\n.primary {\r\n    order: 2;\n}\n}\r\n\r\n\r\n/* @media (min-width: 100em) { */\n.parent {\r\n width: 100%;\r\n text-align: center;\r\n vertical-align: middle;\n}\n.child {\r\n display: inline-block;\r\n top: 50px;\n}\na {\r\n  color: DarkOliveGreen;\r\n  text-decoration: none;\n}\r\n\r\n/* text start */\r\n\r\n/* text end */\r\n\r\n\r\n/* div start */\n#top {\r\n  float: top;\r\n  width: 100%;\r\n  height: 50px;\r\n  /* min-height: 250px; */\r\n  background-color:DarkOliveGreen;\r\n  color: beige;\n}\r\n\r\n/* .left {\r\n  float: left;\r\n  width:auto;\r\n  padding: 2px;\r\n  position: relative;\r\n  text-align: left;\r\n  background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border: 1px solid orange; \r\n  border-radius: 0px 20px 20px 0px; \r\n} */\r\n\r\n/* #right {\r\n  float: right;\r\n  width: 100%;\r\n  margin-left: -215px;\r\n  padding-left: 215px;\r\n  \r\n  box-sizing: border-box;\r\n} */\n.container-column {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: column;\n}\n.container-row {\r\n  display: flex;\r\n  /* flex-direction: row | row-reverse | column | column-reverse; */\r\n               /* //좌->우   //우->좌    //상->하    //하->상 */\r\n  flex-direction: row;\n}\n.boxes {\r\n  width: 33%;\r\n  margin-top: 10px;\r\n  margin-bottom: 10px;\r\n  margin-left: 10px;\r\n  margin-right: 10px;\r\n  border: 1px solid LightGray;\n}\n.boxes-small {\r\n  width: 120px;\r\n  margin: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\r\n\r\n\r\n/* R: 181/ G: 214/ B: 146; #B5D692\r\nR: 163/ G: 204/  B: 163 #A3CCA3\r\nR: 214/ G: 230/ B:  245  #D6E6F5 \r\n*/\n.jb-container {\r\n  width: 1500px;\r\n  margin: 10px auto;\r\n  padding: 0px;\r\n  border: 0px solid DarkOliveGreen;\n}\n.jb-header {\r\n  /* clear: both; */\r\n  padding: 1rem;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #B5D692;\r\n\r\n  font-size: 1.5rem;\n}\n.jb-left {\r\n  width: 200px;\r\n  height: 750px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  font-size: 0.928rem;\r\n  /* color: B5D692; */\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff); */\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\n}\n.jb-right {\r\n  width: 1290px;\r\n  height: 750px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-left: 0.5rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\r\n  /* overflow-x: scroll; */\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.jb-right-expand {\r\n  width: 1500px;\r\n  padding: 0px;\r\n  margin-top: 0.5rem;\r\n  margin-left: 0rem;\r\n  margin-bottom: 0.5rem;\r\n  float: left;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #ffffff6e;\r\n  overflow-x: scroll;\n}\n.contents {\r\n  width: 1190px;\r\n  padding: 20px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid black;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.contents-expand {\r\n  width: 1400px;\r\n  padding: 20px;\r\n  margin-top: 0;\r\n  margin-left: 1.5rem;\r\n  float: left;\r\n  border: 0px solid black;\r\n  /* overflow-x: scroll;\r\n  overflow-y: scroll; */\n}\n.jb-footer {\r\n  clear: both;\r\n  padding: 0.5rem;\r\n  border: 0px solid DarkOliveGreen;\r\n  border-radius: 20px 20px 20px 20px; \r\n  background-color: #B5D692;\n}\n@media ( max-width: 1023px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n@media ( max-width: 767px ) {\n.jb-container {\r\n    width: auto;\n}\n.jb-content {\r\n    float: none;\r\n    width: auto;\n}\n.jb-sidebar {\r\n    float: none;\r\n    width: auto;\n}\n}\n.menu {\r\n  width: 200px;\r\n  padding: 0px;\r\n  margin-top: 1rem;\r\n  float: left;\r\n  /* border: 1px solid #bcbcbc; */\r\n  font-size: 0.928rem;\r\n  /* color: black; */\r\n\r\n  /* background: linear-gradient(to right, #F6F7DD, #ffffff);\r\n  border-radius: 20px 20px 20px 20px;  */\n}\r\n\r\n/* div end */\r\n\r\n/* ul li start */\nul {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\n}\n.ul-card {\r\n  /* font-size: 0.8rem; */\r\n  list-style: square;    /*점을 없애는 부분*/\r\n  padding-left: 1rem;     /*들여쓰기 없애는 부분*/\r\n  padding: left 0;    /*들여쓰기 없애는 부분*/\r\n  margin:0;           /*padding이 안되면 margin으로*/\r\n  margin-bottom: 0px;\r\n  padding:1;\r\n  line-height: 1.5em;\r\n  font-size: 0.928rem;\r\n  color: DarkOliveGreen;\n}\r\n\r\n/* ul { \r\n  margin-left: 10px;\r\n  text-align: left;\r\n  font-size: 0;\r\n}\r\nul li{\r\n  width: 100px; height: 30px; \r\n  display: inline-block;\r\n  font-size: 14px; line-height: 28px;\r\n} */\r\n/* ul li end */\n.button-header {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-menu {\r\n  margin: 2px;\r\n  padding: 3px 10px;  \r\n  font-size: 0.928rem;\r\n  background-color: #9abf7f;\n}\n.button-card {\r\n  width: 100px;\r\n  height: 40px;\r\n  margin: 5px;\r\n  padding: 3px;  \r\n  font-size: 0.8rem;\r\n  /* background-color: #9abf7f; */\r\n  border-top: 1px solid DarkOliveGreen;\r\n  border-bottom: 1px solid DarkOliveGreen;\r\n  border-left: 1px solid DarkOliveGreen;\r\n  border-right: 1px solid DarkOliveGreen;\r\n  background-color: #9abf7f;\r\n  border-radius: 15px;\n}\n.w-btn {\r\n  position: relative;\r\n  border: none;\r\n  display: inline-block;\r\n  padding: 0px 0px;\r\n  border-radius: 15px;\r\n  font-family: \"paybooc-Light\", sans-serif;\r\n  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);\r\n  text-decoration: none;\r\n  /* font-weight: 300; */\r\n  transition: 0.25s;\r\n  width: 100px;\r\n  height: 40px;\n}\n.w-btn-indigo {\r\n  background-color: aliceblue;\r\n  color: #1e6b7b;\n}\nimg { width: 100%;\n}\r\n\r\n/* table start */\ntable {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 0.8rem;\n}\nth {\r\n  border-top: 3px solid DarkOliveGreen;\r\n  /* border: 1px solid 9abf7f; */\r\n  padding: 10px;\r\n  background-color: #fafabb;\n}\ntd {\r\n  text-align: left;\r\n  padding: 7px;\r\n  border-top: 1px solid #9abf7f;\r\n  border-bottom: 1px solid #9abf7f;\r\n  background-color: white;\n}\n.table-view {\r\n  background-color: black;\n}\n.table-card {\r\n  width: 100%;\r\n  border-top: 3px solid DarkOliveGreen;\r\n  border-bottom: 3px solid DarkOliveGreen;\r\n  border-collapse: collapse;\r\n  list-style: square;\n}\n.td-card {\r\n  text-align: left;\r\n  /* padding: 7px; */\r\n  background-color: white;\r\n  list-style: square;\n}\r\n/* table end */\n.image-card {\r\n  /* border: 3px solid gold; */\r\n  border-radius: 20px;\r\n  /* -moz-border-radius: 7px;\r\n  -khtml-border-radius: 7px;\r\n  -webkit-border-radius: 7px; */\n}\r\n\r\n/* .center {\r\n  margin: auto;\r\n  width: 60%;\r\n  border: 3px solid #73AD21;\r\n  padding: 10px;\r\n} */", ""]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
