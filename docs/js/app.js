@@ -3882,11 +3882,7 @@ var img_temp;
         name: '국화',
         id: 6,
         url: __webpack_require__(/*! ./../../assets/images/plant6_01.jpg */ "./src/assets/images/plant6_01.jpg")
-      } // <div style="padding:50px; position:relative;">
-      //   <img :src="require(`@/assets/images/${imgName}.png`)"
-      //       @click="changeImg"/>
-      // </div>
-      ],
+      }],
       conditions: [{
         item_id: 1,
         name: '발아적온최저',
