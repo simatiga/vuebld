@@ -4078,8 +4078,9 @@ var img_temp;
 
     showConditions(item_id) {
       this.img_url = this.items[item_id - 1].url;
+      this.item_id = item_id;
       console.log(this.img_url);
-      this.item_id = item_id; // alert(img_url);
+      console.log(__webpack_require__(/*! @/assets/images/plant2_01.jpg */ "./src/assets/images/plant2_01.jpg")); // alert(img_url);
     } //     
 
 
@@ -9930,7 +9931,7 @@ module.exports = JSON.parse('[[{"col":"TAB_NM"},{"col":"COL_NM"},{"col":"RATE_NU
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
