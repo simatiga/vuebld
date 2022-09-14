@@ -6042,15 +6042,14 @@ const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 /* HOISTED */
 );
 
-const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  class: "image-card",
-  src: "@/components/Menu1/coffee.jpg"
-}, null, -1
-/* HOISTED */
-);
-
+const _hoisted_4 = ["src"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, _hoisted_3, _hoisted_4], 64
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    class: "image-card",
+    src: __webpack_require__(/*! @/components/Menu1/coffee.jpg */ "./src/components/Menu1/coffee.jpg")
+  }, null, 8
+  /* PROPS */
+  , _hoisted_4)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -9734,6 +9733,17 @@ module.exports = __webpack_require__.p + "img/plant6_01.73f9f67d.jpg";
 
 /***/ }),
 
+/***/ "./src/components/Menu1/coffee.jpg":
+/*!*****************************************!*\
+  !*** ./src/components/Menu1/coffee.jpg ***!
+  \*****************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/coffee.1ce3d08f.jpg";
+
+/***/ }),
+
 /***/ "./src/components/Menu2/plantlab.png":
 /*!*******************************************!*\
   !*** ./src/components/Menu2/plantlab.png ***!
@@ -9941,7 +9951,7 @@ module.exports = JSON.parse('[[{"col":"TAB_NM"},{"col":"COL_NM"},{"col":"RATE_NU
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/vuebld/";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
