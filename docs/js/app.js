@@ -3857,11 +3857,10 @@ var img_temp;
   data() {
     return {
       arr: [1, 2, 3],
-      items: [// {name: '상추(로메인)', id: 1, url: require('./../../assets/images/plant1_01.jpg')},
-      {
+      items: [{
         name: '상추(로메인)',
         id: 1,
-        url: 'https://simatiga.github.io/vuebld/img/plant1_01.7d36abd9.jpg'
+        url: __webpack_require__(/*! @/assets/images/plant1_01.jpg */ "./src/assets/images/plant1_01.jpg")
       }, {
         name: '청경채',
         id: 2,
@@ -3869,19 +3868,19 @@ var img_temp;
       }, {
         name: '호야',
         id: 3,
-        url: __webpack_require__(/*! ./../../assets/images/plant3_01.jpg */ "./src/assets/images/plant3_01.jpg")
+        url: __webpack_require__(/*! @/assets/images/plant3_01.jpg */ "./src/assets/images/plant3_01.jpg")
       }, {
         name: '장미허브',
         id: 4,
-        url: __webpack_require__(/*! ./../../assets/images/plant4_01.jpg */ "./src/assets/images/plant4_01.jpg")
+        url: __webpack_require__(/*! @/assets/images/plant4_01.jpg */ "./src/assets/images/plant4_01.jpg")
       }, {
         name: '애플민트',
         id: 5,
-        url: __webpack_require__(/*! ./../../assets/images/plant5_01.jpg */ "./src/assets/images/plant5_01.jpg")
+        url: __webpack_require__(/*! @/assets/images/plant5_01.jpg */ "./src/assets/images/plant5_01.jpg")
       }, {
         name: '국화',
         id: 6,
-        url: __webpack_require__(/*! ./../../assets/images/plant6_01.jpg */ "./src/assets/images/plant6_01.jpg")
+        url: __webpack_require__(/*! @/assets/images/plant6_01.jpg */ "./src/assets/images/plant6_01.jpg")
       }],
       conditions: [{
         item_id: 1,
@@ -6045,7 +6044,7 @@ const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 
 const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
   class: "image-card",
-  src: "./coffee.jpg"
+  src: "@/components/Menu1/coffee.jpg"
 }, null, -1
 /* HOISTED */
 );
@@ -7246,7 +7245,7 @@ const _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElemen
 const _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   class: "row"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
-  src: "https://postfiles.pstatic.net/MjAyMjA5MTRfMTI2/MDAxNjYzMTExMTYyNDUy.-d3_vBXDcz_ni0uw-Iy_XqGAYTVWTvGF3cXc7GM9pHcg.bniRIttHFx6K15AmtDaZamIVUNjfnnKZuPfhA_8OwxYg.PNG.parlor00/image.png?type=w773"
+  src: ""
 })], -1
 /* HOISTED */
 );
@@ -9666,6 +9665,17 @@ module.exports = __webpack_require__.p + "img/test06.e09ffb4c.jpg";
 
 "use strict";
 module.exports = __webpack_require__.p + "img/1.4256fd5b.jpg";
+
+/***/ }),
+
+/***/ "./src/assets/images/plant1_01.jpg":
+/*!*****************************************!*\
+  !*** ./src/assets/images/plant1_01.jpg ***!
+  \*****************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+module.exports = __webpack_require__.p + "img/plant1_01.7d36abd9.jpg";
 
 /***/ }),
 
