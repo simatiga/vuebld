@@ -3244,7 +3244,9 @@ __webpack_require__.r(__webpack_exports__);
   },
 
   mounted() {
+    console.log('App.vue :: process.env : ', ({"NODE_ENV":"development","BASE_URL":"/"}));
     console.log('App.vue :: process.env.NODE_ENV : ', "development");
+    console.log('App.vue :: process.env.BASE_URL : ', "/");
   }
 
 });
@@ -4134,17 +4136,16 @@ var img_temp;
   },
 
   methods: {
-    defaultTemp(item_id) {
-      // console.log(itemarr[0]);
+    defaultTemp(item_id) {// console.log(itemarr[0]);
       // this.arr.length = 3;
-      console.log(this.items[item_id].url);
+      // console.log(this.items[item_id].url);
     },
 
     showConditions(item_id) {
       this.img_url = this.items[item_id - 1].url;
-      this.item_id = item_id;
-      console.log(this.img_url);
-      console.log(__webpack_require__(/*! @/assets/images/plant2_01.jpg */ "./src/assets/images/plant2_01.jpg")); // alert(img_url);
+      this.item_id = item_id; // console.log(this.img_url);
+      // console.log(require('@/assets/images/plant2_01.jpg'));
+      // alert(img_url);
     } //     
 
 
@@ -8641,13 +8642,12 @@ __webpack_require__.r(__webpack_exports__);
 
  // 라우터 추가. 라우터 설정 js를 저장했던 경로를 지정.
 
-
-console.log('main.js :: process.env.NODE_ENV : ', "development"); // import bootstrapVue from '../node_modules/bootstrap-vue-3-wrappers'
+ // import bootstrapVue from '../node_modules/bootstrap-vue-3-wrappers'
 // import "../node_modules/bootstrap"
 // import "../node_modules/bootstrap/dist/js/bootstrap.js"
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 // axios.defaults.baseURL = 'http://localhost:8080'  // default인 것 같다.
-// axios.defaults.baseURL = 'http://localhost:3000'  // 이걸 설정하면 8080 에서 openapi 가 안된다.  그럼 3000에서는 되나?? 안된다.
+// axios.defaults.baseURL = 'http://localhost:3000'  // 이걸 설정하면 8080 에서 openapi call 이 안된다.  그럼 3000에서는 되나?? 안된다.
 // axios.defaults.baseURL = 'http://localhost'
 
 const app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_App_vue__WEBPACK_IMPORTED_MODULE_1__["default"]); // const cors = require('cors');
@@ -10163,7 +10163,7 @@ module.exports = JSON.parse('[[{"col":"TAB_NM"},{"col":"COL_NM"},{"col":"RATE_NU
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/vuebld/";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
