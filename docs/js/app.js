@@ -3241,7 +3241,12 @@ __webpack_require__.r(__webpack_exports__);
     Top: _components_Top__WEBPACK_IMPORTED_MODULE_0__["default"] // Home,
     // HomeAdmin,
 
+  },
+
+  mounted() {
+    console.log('App.vue :: process.env.NODE_ENV : ', "development");
   }
+
 });
 
 /***/ }),
@@ -5784,7 +5789,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   const _component_Right = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Right");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"row container-fluid header\">\r\n    <div class=\"col-sm-1 .\" style=\"display:flex;align-items:center;\">\r\n       <router-link to=\"/\" style=\"text-decoration: none; color: LightGoldenrodYellow;\">My Project</router-link>\r\n    </div>\r\n    <div class=\"col-sm-11 \" style=\"display:flex;align-items:center;\">\r\n      <button type=\"button\" class=\"header\" v-on:click =\"active = !active\">Menu</button>\r\n    </div>\r\n  </div>\r\n  <div class=\"row container-fluid contents\">\r\n    <div class=\"col-sm-2\" v-if=\"active\">\r\n      <Left />\r\n    </div>\r\n    <div class=\"col-sm-10 contents\">\r\n      <Right />\r\n    </div>\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div id=\"top\">\r\n    <router-link to=\"/\" style=\"text-decoration: none; color: black;\">My Project</router-link>\r\n    <button type=\"button\" class=\"header\" v-on:click =\"active = !active\">Menu</button>\r\n  </div>\r\n  <div id=\"left\" v-if=\"active\">\r\n    <Left />\r\n  </div>\r\n  <div id=\"contents\">\r\n    <Right />\r\n  </div> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Top), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Top), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     class: "button-menu",
     onClick: _cache[0] || (_cache[0] = $event => $data.active = !$data.active)
   }, "Menu")]), $data.active ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Left)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div class=\"jb-right\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" v-bind:class = {적용될 클래스명 : true/false 조건식} "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <div v-bind:class=\"jb-right-expand\"> "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
@@ -5803,9 +5808,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* CLASS */
   ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <HomeAdmin /> ")], 2
   /* CLASS */
-  ), _hoisted_4])], 2112
-  /* STABLE_FRAGMENT, DEV_ROOT_FRAGMENT */
-  );
+  ), _hoisted_4]);
 }
 
 /***/ }),
@@ -5993,26 +5996,19 @@ const _hoisted_3 = {
   key: 1
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_center = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("center");
-
   const _component_Menu = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Menu");
 
   const _component_MenuAdmin = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("MenuAdmin");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_center, null, {
-    default: (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(() => [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[0] || (_cache[0] = $event => {
-        $options.showMenu();
-      })
-    }, "사용자"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
-      onClick: _cache[1] || (_cache[1] = $event => {
-        $options.showMenuAdmin();
-      })
-    }, "관리자")]),
-    _: 1
-    /* STABLE */
-
-  }), $data.menu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Menu)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.menu_admin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MenuAdmin)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <DigitalClock /> ")]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[0] || (_cache[0] = $event => {
+      $options.showMenu();
+    })
+  }, "사용자"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[1] || (_cache[1] = $event => {
+      $options.showMenuAdmin();
+    })
+  }, "관리자"), $data.menu ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Menu)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $data.menu_admin ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MenuAdmin)])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <DigitalClock /> ")]);
 }
 
 /***/ }),
@@ -8645,7 +8641,8 @@ __webpack_require__.r(__webpack_exports__);
 
  // 라우터 추가. 라우터 설정 js를 저장했던 경로를 지정.
 
- // import bootstrapVue from '../node_modules/bootstrap-vue-3-wrappers'
+
+console.log('main.js :: process.env.NODE_ENV : ', "development"); // import bootstrapVue from '../node_modules/bootstrap-vue-3-wrappers'
 // import "../node_modules/bootstrap"
 // import "../node_modules/bootstrap/dist/js/bootstrap.js"
 // import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -10166,7 +10163,7 @@ module.exports = JSON.parse('[[{"col":"TAB_NM"},{"col":"COL_NM"},{"col":"RATE_NU
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	!function() {
-/******/ 		__webpack_require__.p = "/vuebld/";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
